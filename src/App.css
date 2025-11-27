@@ -1,0 +1,497 @@
+.app-root-override,
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transition: background-color 0.5s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.dark-theme {
+  background: #0f172a;
+  color: white;
+}
+
+.light-theme {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Карточка часов */
+.clock-card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid;
+  transition: all 0.5s ease;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.dark-card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.5);
+}
+
+.light-card {
+  background: white;
+  border-color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок и управление */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.dark-icon {
+  color: #818cf8;
+}
+
+.light-icon {
+  color: #4f46e5;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.control-btn,
+.theme-toggle {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:focus,
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+.active-dark {
+  background: #475569;
+}
+
+.active-light {
+  background: #e2e8f0;
+}
+
+.inactive-dark {
+  background: #374151;
+  color: #94a3b8;
+}
+
+.inactive-dark:hover {
+  background: #475569;
+}
+
+.inactive-light {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.inactive-light:hover {
+  background: #e2e8f0;
+}
+
+.theme-toggle {
+  border: none;
+}
+
+.dark-toggle {
+  background: #374151;
+  color: #fbbf24;
+}
+
+.dark-toggle:hover {
+  background: #475569;
+}
+
+.light-toggle {
+  background: #f8fafc;
+  color: #4b5563;
+}
+
+.light-toggle:hover {
+  background: #e2e8f0;
+}
+
+/* Панель настроек */
+.settings-panel {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.5s ease;
+}
+
+.dark-settings {
+  background: rgba(51, 65, 85, 0.5);
+}
+
+.light-settings {
+  background: #f8fafc;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.setting-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+}
+
+.style-buttons {
+  display: flex;
+  background: rgba(100, 116, 139, 0.1);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.style-btn {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.style-btn:focus {
+  outline: none;
+}
+
+.style-active-dark {
+  background: #6366f1;
+  color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.style-active-light {
+  background: white;
+  color: #4f46e5;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.style-inactive {
+  color: #64748b;
+  background: transparent;
+}
+
+.style-inactive:hover {
+  color: #374151;
+}
+
+.color-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.color-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-btn:hover {
+  transform: scale(1.1);
+}
+
+.color-btn:focus {
+  outline: none;
+}
+
+.color-active {
+  border-color: #6366f1;
+  transform: scale(1.1);
+}
+
+.color-inactive {
+  border-color: transparent;
+}
+
+/* Контейнер часов */
+.clock-container {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  margin: 0 auto 2rem auto;
+}
+
+@media (min-width: 640px) {
+  .clock-container {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clock-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    grid-template-rows: auto 1fr auto;
+    gap: 1.25rem 1.5rem;
+    align-items: start;
+    justify-items: stretch;
+    padding: 2.25rem;
+    width: 100%;
+    max-width: none;
+    overflow: visible;
+  }
+
+  .header {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+    z-index: 30;
+  }
+
+  .clock-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    justify-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .clock-container .clock-svg {
+    width: auto;
+    height: 100%;
+    max-width: 560px;
+    max-height: calc(100vh - 10rem);
+    display: block;
+  }
+
+  .settings-panel {
+    align-self: start;
+    z-index: 20;
+    pointer-events: auto;
+  }
+
+  .settings-panel {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 0;
+    position: relative;
+    top: 0;
+    z-index: 40;
+    pointer-events: auto;
+  }
+
+  .digital-display {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    justify-self: center;
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .settings-panel {
+    margin-bottom: 1rem;
+  }
+
+  .digital-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .digital-time {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clock-card {
+    height: calc(100vh - 4rem);
+    display: grid;
+    align-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .digital-time {
+    font-size: 2.2rem;
+  }
+  .clock-container {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+.glow-effect {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.dark-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(129,140,248,0.22) 0%, rgba(129,140,248,0.08) 35%, transparent 60%);
+}
+
+.light-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(129,140,248,0.14) 0%, rgba(129,140,248,0.04) 35%, transparent 60%);
+}
+
+.clock-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04));
+}
+
+/* Стили циферблата */
+.clock-face {
+  fill: #1e293b;
+  stroke: #334155;
+  stroke-width: 1;
+}
+
+.dark-face {
+  fill: #1e293b;
+  stroke: #334155;
+}
+
+.light-face {
+  fill: #ffffff;
+  stroke: #e2e8f0;
+}
+
+.clock-number {
+  font-size: 8px;
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+/* Стрелки */
+.hour-hand,
+.minute-hand {
+  transition: stroke 0.3s ease;
+}
+
+.center-dot {
+  fill: #1e293b;
+  stroke: #ef4444;
+  stroke-width: 0.5;
+}
+
+.dark-center {
+  fill: #ffffff;
+}
+
+.light-center {
+  fill: #1e293b;
+}
+
+/* Цифровое отображение */
+.digital-display {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.digital-time {
+  font-family: 'Courier New', monospace;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  transition: color 0.5s ease;
+}
+
+.dark-time {
+  color: #a5b4fc;
+}
+
+.light-time {
+  color: #4f46e5;
+}
+
+.date-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.5s ease;
+}
+
+.dark-date {
+  color: #94a3b8;
+}
+
+.light-date {
+  color: #64748b;
+}
