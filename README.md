@@ -29,3 +29,5 @@ Dev / lint:
 - `src/App.css` — все стили: темы, адаптивная раскладка, оформление циферблата и элементов управления.
 
 ## Ссылка
+
+- https://argentilover.github.io/AnalogClock/
