@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ArgentiLover.github.io/AnalogClock",
+  "homepage": "https://argentilover.github.io/AnalogClock",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
