@@ -1,0 +1,17 @@
+# Установить поведение по умолчанию для всех файлов
+* text=auto
+
+# Явно указать какие файлы должны быть с LF
+*.jsx text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+
+# Указать какие файлы должны быть бинарными (без преобразования)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
